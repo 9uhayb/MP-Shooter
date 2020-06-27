@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign</title>
     <link rel = "icon" type = "image/png" href = "Photos/MP Shooter png.png">
-
+    <link href="css/mycss.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
@@ -15,12 +15,6 @@
     <link href="slick/slick-theme.css" rel='stylesheet' />
     <link href="css/templatemo-real-dynamic.css" rel="stylesheet" />
 
-    <style type="text/css">
-        a:hover {
-            background:#000;
-            color:#fff
-        }
-        </style>
 
 
 </head>
@@ -34,13 +28,13 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4 tm-site-header-left">
-                        <h1 class="text-uppercase tm-site-name" style="color: red;"> MP Shooter </h1>
+                        <h1 class="text-uppercase tm-site-name"><a class="nav-link tm-nav-link" href="index.html" id="title"> MP Shooter </a></h1>
                         <p class="text-white mb-0 tm-site-desc"> MultiPlayer Shooter </p>
                     </div>
                     <div class="col-lg-8 tm-site-header-right" >
                         <!--Navbar-->
                         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                            <a class="navbar-brand" href="#"><img src="photos/MP Shooter jpg.jpg" height="100" width="100"></a>
+                            <img src="photos/MP Shooter jpg.jpg" height="100" width="100">
                             <!-- Collapse button -->
                             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
                                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -54,22 +48,25 @@
                                         <a class="nav-link tm-nav-link" href="index.html">Home</a>                                        
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link tm-nav-link" href="sign.html">Sign up|in <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link tm-nav-link" href="signup.html">Sign up </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link tm-nav-link" href="signin.html">Sign in </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link tm-nav-link" href="about.html">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link tm-nav-link disabled" href="apex.html">Apex</a>
+                                        <a class="nav-link tm-nav-link " href="apex.html">Apex</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link tm-nav-link disabled" href="cod.html">COD</a>
+                                        <a class="nav-link tm-nav-link " href="cod.html">COD</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link tm-nav-link disabled" href="pubg.html">PUBG</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="nav-link tm-nav-link" href="contact-us.html">Contact</a>
+                                        <a class="nav-link tm-nav-link" href="contact-us.html">Contact <span class="sr-only">(current)</span></a>
                                     </li>
                                 </ul>  <!-- Links -->
                             </div>  <!-- Collapsible content -->
@@ -94,9 +91,9 @@
         <div class="container-fluid">
             <!--Intro-->
             <section class="row tm-mb-1">
-                <h2 class="col-12 text-center tm-text-primary tm-my-1 tm-intro-text" style="color: red;"> Sign up / Sign in</h2>
+                <h2 class="col-12 text-center tm-text-primary tm-my-1 tm-intro-text" id="title"> Contact Us <i class="fas fa-fax"></i></h2>  <!-- https://fontawesome.com -->
                 <p class="col-12 text-center "><div class="col-12 text-center">
-                    <h3 class="tm-text-primary tm-mb-4" style="color: red;">MP Shooter</h3>
+                    <h3 class="tm-text-primary tm-mb-4" id="title">MP Shooter</h3>
                     <div>
                         <a href="https://youtube.com" class="tm-social-link"><i class="fab fa-youtube tm-social-icon"></i></a>
                         <a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
@@ -110,33 +107,48 @@
                 <div class="col-lg-4 text-center">
                    
                 </div>
-                
             </section>
-            <div class="container">
-                <form action="/action_page.php">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-                  <label for="country">Country</label>
-                  <select id="country" name="country">
-                    <option value="saudi arabia">Saudi Arabia</option>
-                    <option value="uae">UAE</option>
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                  </select>
-                  <br>  
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
+
+            <div class=" tm-contact-center">
+                <div class="tm-contact-form-wrap">
+                    <h3 class="tm-text-primary tm-mb-6" id="title">Send Us a Message <i class="fas fa-at"></i></h3>  <!-- https://fontawesome.com -->
+                    <form id="contact-form" action="" method="POST" class="tm-contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control rounded-0" placeholder="Full Name" required="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required="" />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="contact-select" name="inquiry">
+                                <option value="-">Please Select</option>
+                                <option value="general">General Question </option>
+                                <option value="technical">Technical Assistance</option>
+                                <option value="registration">Registration</option>
+                                <optgroup label="Games">
+                                    <option value="apex">Apex</option>
+                                    <option value="cod">COD</option>
+                                    <option value="pubg">PUBG</option>
+                                  </optgroup>                                
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message..." required=""></textarea>
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn btn-3 rounded-0 d-block ml-auto">Send It Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
               <br>
               <br>
+
+
+            
+
+
             <!-- Services -->
             <div class="row tm-mb-1">
                 <div class="col-lg-4">   
@@ -146,10 +158,10 @@
                 <div class="col-lg-4">
                     <i><img src="photos/MP Shooter jpg.jpg" alt="MP Shooter.jpg" height="300" width="400" ></i> 
                     <div class="tm-bg tm-box-2">
-                        <h3 class="tm-text-primary tm-h3" style="color: red;">What is MP Shooter?</h3>
-                        <p class="tm-mb-5"><u> MP Shooter </u>  is a website that is all about shooter games that are a subgenre of action video game, which often test the player's spatial awareness, reflexes, and speed... </p>
+                        <h3 class="tm-text-primary tm-h3" > </h3>
+                        <p class="tm-mb-5"><u>  </u>   </p>
                         <div class="text-center">
-                          <a href="about.html" class="btn btn-primary rounded-0">About us</a>
+                          
                         </div>
                     </div>
                 </div>
@@ -164,6 +176,7 @@
 
 
             <footer class="row text-center">
+                <div class="tm-header-stripe w-100"></div>
                 <p class="mb-0 w-100 text-center col-12 ">
                     <a href="#top" class="tm-text-link" >Back to Top </a> <br>
                     <a href="index.html" style="color: red;">Home </a>

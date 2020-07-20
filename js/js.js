@@ -19,3 +19,12 @@ jQuery(function () {
   viewMode: 'years'
 });
 });
+
+
+$(document).ready(function(){
+  $('#btn1').on("click",function(e){
+   $('#myImg').toggle('slow');
+  });
+});
+
+

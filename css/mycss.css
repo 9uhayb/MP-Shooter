@@ -1,5 +1,6 @@
 
-
+mark {color: black;
+background-color: red; }
 
 a:hover {
   background:#000;
@@ -97,4 +98,14 @@ button {
   }
 
 
-  
+  #myImg{
+    display:none;
+  }
+
+  .myimgdivtoggle{
+    display:none;
+  }
+
+  ul#menu li {
+    display:inline;
+  }
